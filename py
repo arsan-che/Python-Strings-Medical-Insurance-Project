@@ -94,3 +94,11 @@ total_insurance_cost = 0
 for cost in insurance_costs_stripped:
     total_insurance_cost += float(cost)
 print(total_insurance_cost)
+
+# Compute and print average insurance cost
+average_insurance_cost = total_insurance_cost / len(insurance_costs_stripped)
+print(average_insurance_cost)
+
+# Print a formatted summary of each person's data
+for i in range(len(names)):
+    print(f"{names[i]} is {ages[i]} years old with a BMI of {bmis[i]} and an insurance cost of ${insurance_costs_stripped[i]}.")
