@@ -82,3 +82,15 @@ print(total_bmi)
 # Compute and print average BMI
 average_bmi = total_bmi / len(bmis)
 print(f'Average BMI: {average_bmi}')
+
+# Remove '$' from insurance cost strings
+insurance_costs_stripped = []
+for cost in insurance_costs:
+    insurance_costs_stripped.append(cost.strip('$'))
+print(insurance_costs_stripped)
+
+# Calculate total insurance cost
+total_insurance_cost = 0
+for cost in insurance_costs_stripped:
+    total_insurance_cost += float(cost)
+print(total_insurance_cost)
