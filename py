@@ -56,3 +56,14 @@ for record in medical_records_clean:
 # Print just the names (first field in each record)
 for record in medical_records_clean:
     print(record[0])
+# Separate each field type into individual lists for easier processing
+names = []
+ages = []
+bmis = []
+insurance_costs = []
+
+for record in medical_records_clean:
+    names.append(record[0])
+    ages.append(record[1])
+    bmis.append(record[2])
+    insurance_costs.append(record[3])
