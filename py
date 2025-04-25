@@ -67,3 +67,18 @@ for record in medical_records_clean:
     ages.append(record[1])
     bmis.append(record[2])
     insurance_costs.append(record[3])
+# Debug: print lists
+print(names)
+print(ages)
+print(bmis)
+print(insurance_costs)
+
+# Calculate total BMI for averaging
+total_bmi = 0
+for bmi in bmis:
+    total_bmi += float(bmi)
+print(total_bmi)
+
+# Compute and print average BMI
+average_bmi = total_bmi / len(bmis)
+print(f'Average BMI: {average_bmi}')
