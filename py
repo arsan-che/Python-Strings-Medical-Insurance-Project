@@ -25,3 +25,22 @@ for i in updated_medical_data:
 # Split the full string into individual records using ';' as separator
 updated_medical_split = updated_medical_data.split(';')
 print(updated_medical_split)  # Debug: print split records
+
+# Further split each record by commas into individual data fields
+medical_records = []
+for record in updated_medical_split:
+    medical_records.append(record.split(','))
+print(medical_records)  # Debug: print raw split records
+
+# Clean up each field by removing unnecessary spaces
+medical_records_clean = []
+for record in medical_records:
+    record_clean = []
+    for item in record:
+        record_clean.append(item.strip())
+    medical_records_clean.append(record_clean)
+print(medical_records_clean)  # Debug: print cleaned records
+
+# Print just the names (first field in each record)
+for record in medical_records_clean:
+    print(record[0])
